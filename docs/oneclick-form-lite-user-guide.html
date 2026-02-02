@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title> OneClick Form Lite — User Guide</title>
+  <style>
+    :root{--fg:#1f2328;--muted:#555;--bg:#fff;--card:#f6f8fa;--border:#d0d7de;}
+    body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--fg);background:var(--bg);}
+    .wrap{max-width:900px;margin:0 auto;padding:28px 18px;}
+    h1{font-size:30px;margin:0 0 6px;}
+    h2{font-size:20px;margin:26px 0 8px;}
+    p,li{color:var(--fg);}
+    .muted{color:var(--muted);}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+    code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:0.95em;}
+    pre{background:#0b1020;color:#e6edf3;border-radius:10px;padding:12px 14px;overflow:auto;}
+    .k{font-weight:600;}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px;}
+    @media (min-width:860px){.grid{grid-template-columns:1fr 1fr;}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1> OneClick Form Lite</h1>
+    <p class="muted">User guide (short and practical).</p>
+
+    <div class="card">
+      <div class="k">Quick start</div>
+      <ol>
+        <li>Activate the plugin.</li>
+        <li>Go to <span class="k">Settings → OneClick Form Lite</span>.</li>
+        <li>Set the <span class="k">To email</span> and select a <span class="k">Transport</span>.</li>
+        <li>Add the form to a page with:</li>
+      </ol>
+      <pre>[oneclickform]</pre>
+    </div>
+
+    <h2>Form fields</h2>
+    <div class="card">
+      <ul>
+        <li>Name (required)</li>
+        <li>Email (required)</li>
+        <li>Subject (optional)</li>
+        <li>Message (required)</li>
+        <li>Consent checkbox (optional, recommended for GDPR-friendly flows)</li>
+      </ul>
+      <p class="muted">A honeypot field is included to reduce bot spam.</p>
+    </div>
+
+    <h2>Translations (Multilang)</h2>
+    <div class="card">
+      <ul>
+        <li>Translations are included for <span class="k">FR</span>, <span class="k">ES</span> and <span class="k">PT-BR</span> (English default).</li>
+        <li>The front-end form and the settings screen follow your WordPress <span class="k">Site Language</span> (Settings → General → Site Language).</li>
+      </ul>
+    </div>
+
+    <h2>Settings</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="k">Recipient</div>
+        <p>Set <span class="k">To email</span> to the mailbox that should receive messages.</p>
+      </div>
+      <div class="card">
+        <div class="k">Sender</div>
+        <p>Set <span class="k">From name</span> and <span class="k">From email</span> (used by the selected transport).</p>
+      </div>
+    </div>
+
+    <h2>Transport modes</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="k">WP Mail</div>
+        <p>Uses WordPress <code>wp_mail()</code>. Fast to set up, but deliverability depends on your hosting provider.</p>
+      </div>
+      <div class="card">
+        <div class="k">SMTP (recommended)</div>
+        <p>Uses your SMTP server for better deliverability. Fill host, port, encryption, username and password.</p>
+        <p class="muted">Tip: many providers require an “app password”.</p>
+      </div>
+      <div class="card">
+        <div class="k">File mode</div>
+        <p>Writes messages to files for debugging or non-email environments.</p>
+        <ul>
+          <li>Directory: <code>wp-content/uploads/ocf-mails/</code></li>
+          <li>Format: <code>.eml</code> or <code>.txt</code></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="k">Test email tool</div>
+        <p>Use the “Send test email” section to validate delivery and configuration.</p>
+      </div>
+    </div>
+
+    <h2>Google reCAPTCHA v3 (optional)</h2>
+    <div class="card">
+      <ol>
+        <li>Create a reCAPTCHA v3 key pair in Google reCAPTCHA admin and add your domain(s).</li>
+        <li>In the plugin settings, enable reCAPTCHA and paste the Site Key and Secret Key.</li>
+        <li>Keep the default action (<code>contact_form</code>) unless you changed it in your integration.</li>
+        <li>Set a threshold (commonly <code>0.5</code>) and adjust if you block too many real users.</li>
+      </ol>
+      <p class="muted">reCAPTCHA v3 is score-based (no checkbox challenge). Low scores are treated as suspicious.</p>
+    </div>
+
+    <h2>GDPR notes</h2>
+    <div class="card">
+      <ul>
+        <li>The plugin does not store messages in the WordPress database.</li>
+        <li>Messages are delivered by email or written to files (file mode).</li>
+        <li>Your mail provider/server may store emails in logs and mailboxes.</li>
+      </ul>
+    </div>
+
+    <h2>Troubleshooting</h2>
+    <div class="card">
+      <ul>
+        <li><span class="k">No emails received:</span> try SMTP, check spam folder, verify “From email” and recipient.</li>
+        <li><span class="k">File mode not writing:</span> ensure <code>wp-content/uploads/</code> is writable.</li>
+        <li><span class="k">reCAPTCHA blocks too much:</span> lower the threshold or verify keys and domain.</li>
+      </ul>
+    </div>
+
+    <p class="muted" style="margin-top:18px;">© KitCode — OneClick Form Lite</p>
+  </div>
+</body>
+</html>

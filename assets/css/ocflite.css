@@ -1,0 +1,177 @@
+.ocflite-form {
+  position: relative;
+  max-width: 560px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border: 1px solid var(--ocflite-border, #e6e9ef);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  background: var(--wp--style--color--background, var(--wp--preset--color--background, transparent));
+  color: var(--ocflite-text, currentColor); /* Ensure inner text follows theme text color */
+}
+
+/* Ensure consistent box-sizing across the form */
+.ocflite-form *,
+.ocflite-form *::before,
+.ocflite-form *::after { box-sizing: border-box; }
+
+.ocflite-form h3 {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+  text-align: center;
+}
+
+.ocflite-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* Text inputs and textarea */
+.ocflite-form input[type="text"],
+.ocflite-form input[type="email"],
+.ocflite-form input[type="password"],
+.ocflite-form textarea {
+  width: 100%;
+  display: block;
+  padding: .65rem .75rem;
+  border: 1px solid var(--ocflite-border, #c7cfdb);
+  border-radius: 5px;
+  margin-top: .4rem;
+  font-size: .95rem;
+  line-height: 1.3;
+
+  /* Field background derived from theme globals:
+     - On light base, contrast is usually dark => slightly darker field
+     - On dark base, contrast is usually light => slightly lighter field */
+  background-color: color-mix(
+    in srgb,
+    var(--ocflite-field-base, #ffffff) 90%,
+    var(--ocflite-field-contrast, #000000) 10%
+  );
+
+  /* Match text color inside fields with the plugin text color */
+  color: var(--ocflite-text, currentColor);
+  caret-color: var(--ocflite-text, currentColor);
+}
+
+/* Placeholder is a softer version of the same text color */
+.ocflite-form input::placeholder,
+.ocflite-form textarea::placeholder {
+  color: color-mix(in srgb, var(--ocflite-text, currentColor) 60%, transparent 40%);
+}
+
+.ocflite-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Consent section: checkbox and label aligned on the same line */
+.ocflite-form .ocflite-consent {
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* Checkbox styling */
+.ocflite-form .ocflite-consent input[type="checkbox"] {
+  width: auto;
+  display: inline-block;
+  margin: 0;
+  outline: none;   /* Remove focus outline (accessibility trade-off) */
+  box-shadow: none;
+  background-color: var(--ocflite-field-bg, #fff);
+}
+
+/* Submit button
+   We DO NOT set background/color here:
+   the 'wp-element-button' class applies theme styles automatically. */
+.ocflite-form .ocflite-submit {
+  width: 100%;
+  padding: .75rem 1rem;
+  border-radius: 5px;
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.ocflite-form .ocflite-submit:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.95);
+}
+
+/* Fallback for very old themes that don't style .wp-element-button */
+@supports not (color: var(--wp--preset--color--primary)) {
+  .ocflite-form .ocflite-submit {
+    background: #1f6feb;
+    color: #ffffff;
+    border: 0;
+  }
+}
+
+.ocflite-form .ocflite-row { margin: 0 0 14px; }
+
+.ocflite-form .ocflite-row--submit { text-align: center; margin-bottom: 0; }
+
+.ocflite-form .ocflite-row--submit .wp-element-button,
+.ocflite-form .ocflite-row--submit button[type="submit"]{
+  display:inline-block;
+  padding:.75rem 1rem;
+  border-radius:5px;
+  text-transform: uppercase;
+  transition: transform .2s ease, filter .2s ease;
+}
+.ocflite-form .ocflite-row--submit .wp-element-button:hover,
+.ocflite-form .ocflite-row--submit button[type="submit"]:hover{
+  transform: translateY(-1px);
+  filter: brightness(0.95);
+}
+
+/* Consent (match frontend.php) */
+.ocflite-form .ocflite-consent{
+  font-size: .9rem;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* Success message overlay */
+.ocflite-form .ocflite-fields{ transition: opacity 1s ease; }
+.ocflite-form.ocflite--sent .ocflite-fields{ opacity:0; pointer-events:none; }
+
+.ocflite-form [data-ocflite-message]{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:24px;
+  font-weight:700;
+  font-size:clamp(1.5rem,3.6vw,2.25rem);
+  line-height:1.25;
+  white-space: pre-line;
+  opacity:0;
+  transition:opacity .35s ease;
+  pointer-events:none;
+}
+.ocflite-form.ocflite--sent [data-ocflite-message]{ opacity:1; pointer-events:auto; }
+
+/* Tooltip */
+.ocflite-tip{
+  position:absolute;
+  z-index:99999;
+  max-width:320px;
+  background:#fff !important;
+  color:#c00 !important;
+  padding:10px;
+  border:1px solid #c00;
+  border-radius:5px;
+  font-size:12px;
+  line-height:1.35;
+  box-shadow:0 2px 10px rgba(0,0,0,.12);
+  text-align:left;
+  font-weight:600;
+}
+.ocflite-tip::after{content:"";position:absolute;left:10px;top:-8px;border:8px solid transparent;border-bottom:0;border-top-color:#c00}
+.ocflite-tip::before{content:"";position:absolute;left:10px;top:-6px;border:8px solid transparent;border-bottom:0;border-top-color:#fff}

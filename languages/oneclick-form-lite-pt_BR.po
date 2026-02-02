@@ -1,0 +1,250 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OneClick Form Lite 1.1.3\n"
+"POT-Creation-Date: 2025-09-01 00:00\n"
+"PO-Revision-Date: 2025-09-09 00:00+0000\n"
+"Last-Translator: KitCode <support@oneclickform.com>\n"
+"Language-Team: KitCode Translations <support@oneclickform.com>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: oneclick-form-lite\n"
+"X-Generator: Poedit 3.7\n"
+
+msgid "OneClick Form Lite"
+msgstr "OneClick Form Lite"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Plugin language"
+msgstr "Idioma do plugin"
+
+msgid "Automatic (follow WordPress)"
+msgstr "Automático (seguir o WordPress)"
+
+msgid "Email & Sending"
+msgstr "E-mail e envio"
+
+msgid "Choose how contact form emails are delivered."
+msgstr "Escolha como os e-mails do formulário de contato são enviados."
+
+msgid "Transport"
+msgstr "Método de envio"
+
+msgid "WordPress (wp_mail)"
+msgstr "WordPress (wp_mail)"
+
+msgid "SMTP (built-in)"
+msgstr "SMTP (integrado)"
+
+msgid "File mode"
+msgstr "Modo arquivo"
+
+msgid ""
+"In File mode, emails are saved to uploads/ocf-mails/ for offline "
+"testing."
+msgstr ""
+"No modo Arquivo, os e-mails são salvos em uploads/ocf-mails/ para "
+"testes off-line."
+
+msgid "Recipient"
+msgstr "Destinatário"
+
+msgid "From (email)"
+msgstr "E-mail do remetente"
+
+msgid "From (name)"
+msgstr "Nome do remetente"
+
+msgid "SMTP"
+msgstr "SMTP"
+
+msgid "SMTP Host"
+msgstr "Servidor SMTP"
+
+msgid "SMTP Port"
+msgstr "Porta SMTP"
+
+msgid "(465=SSL, 587=TLS)"
+msgstr "(465=SSL, 587=TLS)"
+
+msgid "Security"
+msgstr "Segurança"
+
+msgid "TLS (STARTTLS)"
+msgstr "TLS (STARTTLS)"
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "None (not recommended)"
+msgstr "Nenhuma (não recomendado)"
+
+msgid "Username"
+msgstr "Nome de usuário"
+
+msgid "Password"
+msgstr "Senha"
+
+msgid "File Mode"
+msgstr "Modo Arquivo"
+
+msgid "File format"
+msgstr "Formato de arquivo"
+
+msgid ".eml"
+msgstr ".eml"
+
+msgid ".txt"
+msgstr ".txt"
+
+msgid "Save"
+msgstr "Salvar"
+
+msgid "Send test email"
+msgstr "Enviar e-mail de teste"
+
+msgid ""
+"Use this to verify your current delivery method.\n"
+"A simple test message will be sent to the configured Recipient."
+msgstr ""
+"Use isto para verificar o método de envio atual.\n"
+"Uma mensagem de teste simples será enviada ao destinatário configurado."
+
+msgid "Unauthorized"
+msgstr "Não autorizado"
+
+msgid "OneClick Form Lite — Test email"
+msgstr "OneClick Form Lite — E-mail de teste"
+
+msgid "This is a OneClick Form Lite test email."
+msgstr "Este é um e-mail de teste do OneClick Form Lite."
+
+msgid "Test email sent successfully."
+msgstr "E-mail de teste enviado com sucesso."
+
+msgid "Email sending failed."
+msgstr "Falha no envio do e-mail."
+
+msgid "SMTP connection failed."
+msgstr "Falha na conexão SMTP."
+
+msgid "TLS negotiation failed."
+msgstr "Falha na negociação TLS."
+
+msgid "SMTP authentication failed."
+msgstr "Falha na autenticação SMTP."
+
+msgid "Could not write to SMTP socket."
+msgstr "Não foi possível escrever no socket SMTP."
+
+msgid "Unexpected SMTP response from server."
+msgstr "Resposta SMTP inesperada do servidor."
+
+msgid "SMTP read timed out."
+msgstr "Tempo de leitura SMTP esgotado."
+
+msgid "File write failed."
+msgstr "Falha na gravação do arquivo."
+
+msgid "Settings saved."
+msgstr "Configurações salvas."
+
+msgid "Documentation"
+msgstr "Documentação"
+
+msgid "Open the user guide in your browser."
+msgstr "Abra o guia do usuário no navegador."
+
+msgid "Open HTML guide"
+msgstr "Abrir guia HTML"
+
+msgid "Download PDF guide"
+msgstr "Baixar guia em PDF"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Subject"
+msgstr "Assunto"
+
+msgid "Message"
+msgstr "Mensagem"
+
+msgid ""
+"I consent to having this website store my submitted information so they can "
+"respond to my inquiry."
+msgstr ""
+"Autorizo que este site armazene as informações enviadas para que possam "
+"responder à minha solicitação."
+
+msgid "Send"
+msgstr "Enviar"
+
+msgid "Sending"
+msgstr "Enviando"
+
+msgid "Please fill out this field."
+msgstr "Preencha este campo."
+
+msgid "Please enter a valid email address."
+msgstr "Insira um endereço de e-mail válido."
+
+msgid "Thank you! Your message has been sent."
+msgstr "Obrigado! Sua mensagem foi enviada."
+
+msgid ""
+"OneClick Form Lite activated."
+msgstr ""
+"OneClick Form Lite foi ativado."
+
+msgid "Your name"
+msgstr "Seu nome"
+
+msgid "you@example.com"
+msgstr "voce@exemplo.com"
+
+msgid "Write your message…"
+msgstr "Escreva sua mensagem…"
+
+msgid "reCAPTCHA v3"
+msgstr "reCAPTCHA v3"
+
+msgid "Enable"
+msgstr "Ativar"
+
+msgid "Protect submissions with Google reCAPTCHA v3"
+msgstr "Proteger envios com o Google reCAPTCHA v3"
+
+msgid "Site key"
+msgstr "Chave do site"
+
+msgid "Secret key"
+msgstr "Chave secreta"
+
+msgid "Threshold"
+msgstr "Limite"
+
+msgid "Recommended: 0.5 (higher = stricter)"
+msgstr "Recomendado: 0,5 (mais alto = mais rigoroso)"
+
+msgid "Action"
+msgstr "Ação"
+
+msgid "Keep this value consistent with the front-end action."
+msgstr "Mantenha este valor consistente com a ação no front-end."
+
+msgid "Test emails are saved in:"
+msgstr "Os e-mails de teste são salvos em:"
+
+msgid "Base URL for dev email files (directory listing may be disabled by your server):"
+msgstr "URL base para arquivos de e-mail de desenvolvimento (a listagem do diretório pode estar desativada pelo servidor):"
+
+msgid "Support"
+msgstr "Suporte"
